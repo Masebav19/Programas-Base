@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+  <describe zoomD="100" zoomN="100" modelX="2" modelY="1" modelType="FALSE">
+    <FileVersion>1.0</FileVersion>
+    <brick name="TWIDO1">
+      <base ref="TWDLCAA16DRF" xpos="293" ypos="177" label="My Twido">
+      </base>
+      <leftModuleList>
+      </leftModuleList>
+      <expansionList>
+      </expansionList>
+      <optionList>
+      </optionList>
+      <portList>
+        <port nmbr="1">
+          <address>247</address>
+          <protocol>MODBUS</protocol>
+          <IsModBusMaster>1</IsModBusMaster>
+        </port>
+      </portList>
+    </brick>
+    <networkElementList>
+      <networkElement ref="61100202" name="Slave 0" nmbr="1" xpos="131" ypos="166" isConfig="TRUE">
+        <configParam>
+          <address>1</address>
+          <protocol>MODBUS</protocol>
+          <SupervisionTag>$</SupervisionTag>
+          <ResetParamTag>$</ResetParamTag>
+          <etherPortId>192.168.10.5</etherPortId>
+          <etherPortSubMask>255.255.255.0</etherPortSubMask>
+          <etherPortGateWay>192.168.10.1</etherPortGateWay>
+        </configParam>
+      </networkElement>
+    </networkElementList>
+    <networkList>
+      <network name="my network 1" nmbr="1">
+        <label xpos="179" ypos="271">
+        </label>
+        <com>TModbusCom_A</com>
+        <configParam>
+          <baudrate>19200</baudrate>
+          <dataByte>8</dataByte>
+          <stopBit>1</stopBit>
+          <responseTime>10</responseTime>
+          <breakOutTime>10</breakOutTime>
+          <parity>even</parity>
+        </configParam>
+        <linkList>
+          <link nmbr="1">
+            <begin>
+              <anchorPoint strID="Slave1_Anchor1">
+              </anchorPoint>
+            </begin>
+            <end>
+              <anchorPoint strID="Twido1_Base_Port1_Anchor1">
+              </anchorPoint>
+            </end>
+            <interPoint xpos="129" ypos="386">
+            </interPoint>
+            <interPoint xpos="129" ypos="157">
+            </interPoint>
+            <interPoint xpos="314" ypos="157">
+            </interPoint>
+          </link>
+        </linkList>
+      </network>
+    </networkList>
+    <postItList>
+    </postItList>
+  </describe>
+
+
