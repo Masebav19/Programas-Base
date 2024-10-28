@@ -1,0 +1,1 @@
+Modelo Micro 850 2080-LC50-24QWB
